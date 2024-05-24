@@ -28,14 +28,14 @@ var pJS = function(e, a) {
         },
         particles: {
             number: {
-                value: 400,
+                value: 10,
                 density: {
                     enable: !0,
                     value_area: 800
                 }
             },
             color: {
-                value: "#fff"
+                value: "#3a3a5d"
             },
             shape: {
                 type: "circle",
@@ -53,42 +53,42 @@ var pJS = function(e, a) {
                 }
             },
             opacity: {
-                value: 1,
-                random: !1,
+                value: 0.5,
+                random: !0,
                 anim: {
-                    enable: !1,
-                    speed: 2,
-                    opacity_min: 0,
+                    enable: !0,
+                    speed: 1,
+                    opacity_min: 0.25,
                     sync: !1
                 }
             },
             size: {
-                value: 20,
-                random: !1,
+                value: 30,
+                random: !0,
                 anim: {
                     enable: !1,
                     speed: 20,
-                    size_min: 0,
+                    size_min: 10,
                     sync: !1
                 }
             },
             line_linked: {
                 enable: !0,
                 distance: 100,
-                color: "#fff",
-                opacity: 1,
-                width: 1
+                color: "#ffffff",
+                opacity: 0.6,
+                width: 5
             },
             move: {
                 enable: !0,
-                speed: 2,
+                speed: 10,
                 direction: "none",
-                random: !1,
+                random: !0,
                 straight: !1,
                 out_mode: "out",
                 bounce: !1,
                 attract: {
-                    enable: !1,
+                    enable: !0,
                     rotateX: 3e3,
                     rotateY: 3e3
                 }
@@ -100,32 +100,38 @@ var pJS = function(e, a) {
             events: {
                 onhover: {
                     enable: !0,
-                    mode: "grab"
+                    mode: "bubble"
                 },
                 onclick: {
                     enable: !0,
                     mode: "push"
                 },
+                ondrag: {
+                    enable: !0,
+                    mode: "repulse"
+                },
                 resize: !0
             },
             modes: {
                 grab: {
-                    distance: 100,
+                    distance: 400,
                     line_linked: {
                         opacity: 1
                     }
                 },
                 bubble: {
-                    distance: 200,
-                    size: 80,
-                    duration: .4
+                    distance: 350,
+                    size: 30,
+                    duration: 2,
+                    opacity: 0.8,
+                    speed: 5
                 },
                 repulse: {
-                    distance: 200,
+                    distance: 50,
                     duration: .4
                 },
                 push: {
-                    particles_nb: 4
+                    particles_nb: 5
                 },
                 remove: {
                     particles_nb: 2
